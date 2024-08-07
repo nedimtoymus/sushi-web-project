@@ -1,0 +1,67 @@
+.header__nav {
+  display: flex; /* Öğeleri yatay olarak hizalar */
+  overflow: hidden; /* Taşan içeriği gizler */
+}
+
+.header__logo {
+  flex: 1; /* Öğenin büyüklüğünü belirler, alanın tamamını kaplar */
+  display: flex; /* İçindeki öğeleri yatay olarak hizalar */
+
+  position: relative; /* Mutlak veya göreceli konumlandırma için bir referans noktası sağlar */
+  padding: 20px; /* İçeriğin kenar boşluğunu ayarlar */
+}
+
+.header__logo-overlay {
+  position: absolute; /* Mutlak konumlandırma sağlar, üst, alt, sağ ve sol değerlerine göre yerleştirilir */
+  inset: 0; /* Tüm kenar boşluklarını sıfırlar, genişliği ve yüksekliği tam yapar */
+  width: 100%; /* Genişliği ayarlar */
+
+  background-color: var(--primary-color); /* Arka plan rengini belirler */
+  z-index: -1; /* Öğeyi diğerlerinin arkasına yerleştirir */
+}
+
+.header__logo h4 {
+  padding-left: 30px; /* İçeriğin sol kenar boşluğunu ayarlar */
+
+  font-weight: 700; /* Yazı kalınlığını belirler */
+  font-size: 24px; /* Yazı boyutunu belirler */
+  text-transform: uppercase; /* Yazıları büyük harfe dönüştürür */
+  font-family: var(--playfair-display); /* Yazı tipini belirler */
+  color: #fff; /* Yazı rengini beyaz yapar */
+  opacity: 0.8; /* Öğenin saydamlığını belirler */
+}
+
+.header__menu,
+.header__menu-mobile {
+  padding: 20px; /* İçeriğin kenar boşluğunu ayarlar */
+  flex: 1.236; /* Öğenin büyüklüğünü belirler, daha geniş yapar */
+  display: flex; /* İçindeki öğeleri yatay olarak hizalar */
+  align-items: center; /* Öğeleri dikey eksende ortalar */
+  justify-content: flex-end; /* Öğeleri yatay eksende sağa hizalar */
+  gap: 64px; /* Öğeler arasındaki boşluğu ayarlar */
+
+  list-style: none; /* Madde işaretlerini kaldırır */
+}
+
+.header__menu li {
+  font-weight: 500; /* Yazı kalınlığını belirler */
+  font-family: var(--plus-jakarta-sans); /* Yazı tipini belirler */
+  color: var(--secondary-color); /* Yazı rengini belirler */
+  font-size: 16px; /* Yazı boyutunu belirler */
+  text-transform: uppercase; /* Yazıları büyük harfe dönüştürür */
+  line-height: 20px; /* Satır yüksekliğini belirler */
+  cursor: pointer; /* İmleci el işaretine dönüştürür */
+}
+
+.header__menu li img {
+  width: 24px; /* Genişliği ayarlar */
+  height: 24px; /* Yüksekliği ayarlar */
+  object-fit: contain; /* İçeriği sığdırmak için boyutlandırır */
+}
+
+.header__menu-mobile {
+  display: none; /* Öğeyi gizler */
+  gap: 20px; /* Öğeler arasındaki boşluğu ayarlar */
+
+  position: relative; /* Mutlak veya göreceli konumlandırma için bir referans noktası sağlar */
+}
